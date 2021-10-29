@@ -1,11 +1,20 @@
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Hero from "./Hero";
-function App() {
+import React from "react";
+import Home from "./Home";
+import 'react-bootstrap';
+import './App.css';
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+const App = () => {
   return (
     <Router>
-      <Hero />
+      <div>
+        <Route path='/'>
+          <Home />
+        </Route>
+      </div>
     </Router>
+
   );
 }
 
