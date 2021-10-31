@@ -7,12 +7,18 @@ import $ from "jquery";
 
 const Item = (props) => {
 
+    const[currentModalQtt, setModalQttUtil] = useState(1);
+    const setModalQtt = (qtt) => {
+      if (qtt < 1) qtt = 1;
+      setModalQttUtil(qtt);
+    }
     const[modalIsOpen, setModalOpenState] = useState(false);
     const closeModal = () => {
       setModalOpenState(false);
     }
     const openModal = () => {
       setModalOpenState(true);
+      setModalQtt(1);
     }
     const saveNote = () => {
         if ($('#note').val() === "") {
@@ -22,7 +28,28 @@ const Item = (props) => {
             var note = $('#note').val();
             alert("Your note is well received: " + note);
         }
+        addItem(props, currentModalQtt);
         closeModal();
+    }
+    const addItem = (props, qtt) => {
+        let indexInArray = -1;
+        indexInArray = props.cart.map(function(item) 
+            {return item.id}).indexOf(props.id);
+        if (indexInArray !== -1) {
+            // const num = parseInt(props.cart[indexInArray]["quantity"]);
+            props.cart[indexInArray]["quantity"] += qtt;
+            props.setCart(props.cart.concat());
+        }
+        else {
+            const newItemInCart = [{
+                "name": props.name,
+                "price": props.price,
+                "src": props.src, 
+                "id": props.id,
+                "quantity": qtt
+            }];
+            props.setCart(props.cart.concat(newItemInCart));
+        }
     }
 
     return (
@@ -46,26 +73,7 @@ const Item = (props) => {
                         style={{width:30}} 
                         draggable="false" 
                         src={cartIcon}
-                        onClick={() => {
-                            let indexInArray = -1;
-                            indexInArray = props.cart.map(function(item) 
-                                 {return item.id}).indexOf(props.id);
-                            if (indexInArray !== -1) {
-                                // const num = parseInt(props.cart[indexInArray]["quantity"]);
-                                props.cart[indexInArray]["quantity"] += 1;
-                                props.setCart(props.cart.concat());
-                            }
-                            else {
-                                const newItemInCart = [{
-                                    "name": props.name,
-                                    "price": props.price,
-                                    "src": props.src, 
-                                    "id": props.id,
-                                    "quantity": 1
-                                }];
-                                props.setCart(props.cart.concat(newItemInCart));
-                            }
-                        }}
+                        onClick={() => addItem(props, 1)}
                         alt=".."/>
                 </span>
                 </div>
@@ -106,13 +114,9 @@ const Item = (props) => {
                         <Row className="d-flex justify-content-between align-items-center">
                             <Col sm={3} className=" mx-3 fw-bold"> <big>Quantity</big></Col>
                             <Col sm={6} className="myButton d-flex justify-content-center align-items-center">
-                                <Button variant="outline-danger" onClick={() => {
-                                    
-                                }}> - </Button>
-                                <span className="mx-3 fw-bold"> {1} </span>
-                                <Button variant="outline-danger" onClick={() => {
-                                    
-                                }}> + </Button>
+                                <Button variant="outline-danger" onClick={() => setModalQtt(currentModalQtt - 1)}> - </Button>
+                                <span className="mx-3 fw-bold"> {currentModalQtt} </span>
+                                <Button variant="outline-danger" onClick={() => setModalQtt(currentModalQtt + 1)}> + </Button>
                             </Col>
                         </Row>
 
