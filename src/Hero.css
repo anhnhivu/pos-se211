@@ -26,3 +26,33 @@
   font-weight: bold;
   font-family: "Kanit", sans-serif;
 }
+.Sologan {
+  font-size: clamp(2.5rem, 10vw, 5rem);
+  margin-bottom: 1rem;
+  box-shadow: 3px 5px #e9ba23;
+  letter-spacing: 3px;
+}
+.HeroItems > p {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  margin-bottom: 2rem;
+}
+.ButtonField {
+  margin-left: 0.5rem;
+}
+.ButtonField > button {
+  font-size: 1.4rem;
+  border: none;
+  background: #73e318;
+  color: #fff;
+  transition: 0.2s ease-out;
+  margin: 5px;
+  font-family: "Kanit", sans-serif;
+  border-radius: 3px;
+  height: 4rem;
+}
+.ButtonField > button:hover {
+  background: #ffc500;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  color: #000;
+}

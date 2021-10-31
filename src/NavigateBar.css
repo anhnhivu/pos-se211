@@ -14,3 +14,35 @@
   cursor: pointer;
   font-family: "Kanit", sans-serif;
 }
+.SignupLogin {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.Signup {
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif;
+  margin-top: 35px;
+  margin-right: 10px;
+}
+.Login {
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif;
+  margin-top: 35px;
+  margin-right: 15px;
+}

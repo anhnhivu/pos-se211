@@ -7,7 +7,12 @@ const Hero = () => {
       <NavigateBar />
       <div className="HeroContent">
         <div className="HeroItems">
-          <h1>Sologan</h1>
+          <h1 className="Sologan">Our Sologan</h1>
+          <p>Ready in 5 minutes</p>
+          <div className="ButtonField">
+            <button className="Button1">Place order</button>
+            <button className="Button2">Reserve table</button>
+          </div>
         </div>
       </div>
     </div>
