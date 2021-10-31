@@ -8,7 +8,9 @@ import Item from './Item';
 
 const ItemPage = (props) => {
 
-    const [items, setItems] = useState(props.items)
+    const [items, setItems] = useState([])
+
+
     const itemsToShow = items ? items.filter(item =>
         item.type === props.kind
     ) : []
@@ -33,6 +35,9 @@ const ItemPage = (props) => {
                                 name={item.name}
                                 price={item.price}
                                 src={item.src}
+                                id={item.id}
+                                type={item.type}
+                                cart={props.cart} setCart={props.setCart}
                                 />
                         </Col>
                     )})}

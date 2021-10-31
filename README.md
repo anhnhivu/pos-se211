@@ -1,18 +1,5 @@
 # POS-System
 
-## Structure
-
-```
-App
-  |___ Home
-          |___ Categories     
-          |          |___ ItemPage 
-          |                      |___ Item
-          |___ Cart
-```
-
-## Commands
-
 To run this repo, you may need to run these commands.
 
 - Install `node_modules` folder:
@@ -33,6 +20,4 @@ npm run server
 - Run the program: 
 ```
 npm start
-```
-
-
+```https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
