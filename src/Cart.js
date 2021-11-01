@@ -61,16 +61,14 @@ const Cart = (props) => {
                 : props.cart.reduce((total, obj) => {
                     return total + obj["price"] * obj["quantity"];
                  }, 0).toFixed(2);
-    const[modalIsOpen, setModalOpenState] = useState(true);
+    const[modalIsOpen, setModalOpenState] = useState(false);
     const closeModal = () => {
         setModalOpenState(false);
       }
     const openModal = () => {
         setModalOpenState(true);
       }
-    
-    
-    
+
     return (
         <div className="card h-100">
             <div className="card-body d-flex flex-column flex-row align-items-stretch">
