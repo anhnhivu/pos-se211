@@ -131,7 +131,7 @@ h5 {
   position: absolute;
   top: 6px;
   padding: 7px 0 0 10px;
-  transition: 'ease all 200ms';
+  transition: 'ease all 500ms';
   opacity: 0.5;
   color: #dae0e5 !important;
   font-size: 75%
