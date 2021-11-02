@@ -73,7 +73,7 @@ form button {
   width: 140px;
   height: 40px;
   border: none;
-  background-color: #121619;
+  background-color: #e31837;
   color: whitesmoke;
   font-size: 15px;
   cursor: pointer;
@@ -107,7 +107,7 @@ form button {
   flex-direction: row;
 }
 .react-datetime-picker__inputGroup__divider {
-  margin-top: 8.2px;
+  margin-top: 2px;
 }
 
 .react-calendar {

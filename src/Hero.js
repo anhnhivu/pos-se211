@@ -12,7 +12,7 @@ const Hero = () => {
       <NavigateBar />
       <div className="HeroContent">
         <div className="HeroItems">
-          <h1 className="Sologan">Our Sologan</h1>
+          <h1 className="Sologan">Taste the myth</h1>
           <p>Ready in 5 minutes</p>
           <div className="ButtonField">
             <button className="Button1" onClick={gotoHomePage}>

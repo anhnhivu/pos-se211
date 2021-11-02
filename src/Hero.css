@@ -19,12 +19,13 @@
   height: 100vh;
   max-height: 100%;
   padding: 0 2rem;
-  width: 650px;
+  width: 50vw;
   color: #fff;
   text-transform: uppercase;
   line-height: 1;
   font-weight: bold;
-  font-family: "Kanit", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 .Sologan {
   font-size: clamp(2.5rem, 10vw, 5rem);
@@ -42,11 +43,12 @@
 .ButtonField > button {
   font-size: 1.4rem;
   border: none;
-  background: #73e318;
+  background: #e31837;
   color: #fff;
   transition: 0.2s ease-out;
   margin: 5px;
-  font-family: "Kanit", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   border-radius: 3px;
   height: 4rem;
 }

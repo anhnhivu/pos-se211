@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import "./login.css";
+import { Link } from "react-router-dom";
 function Login() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   return (
     <div className="LoginContainer">
-      <h1 className="header">
-        Be members to save points and receive discount!
-      </h1>
+      <h1 className="header">Sign in to save points and receive discount!</h1>
       <div className="FormContainer">
         <h2>Sign In</h2>
         <form className="FormContain">
           <h5>E-mail</h5>
           <input
-            type="text"
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -29,7 +28,7 @@ function Login() {
             Sign In
           </button>
         </form>
-        <div class="SignUp"></div>
+        <div className="Signup"></div>
       </div>
     </div>
   );
