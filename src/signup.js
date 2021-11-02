@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
+import { auth } from "./firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import "./signup.css";
 function Signup() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const Register = (e) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        history.push("/homepage");
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <div>
       <div className="SignupContainer">
@@ -26,7 +37,11 @@ function Signup() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button className="login_signinbutton" type="submit">
+            <button
+              className="login_signinbutton"
+              type="submit"
+              onClick={Register}
+            >
               Sign Up
             </button>
           </form>

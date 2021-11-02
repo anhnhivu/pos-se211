@@ -21,7 +21,7 @@
 .SignupLogin {
   display: block;
   position: absolute;
-  top: 0;
+  top: -6px;
   right: 0;
   cursor: pointer;
   color: #fff;

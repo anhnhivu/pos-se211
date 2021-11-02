@@ -24,7 +24,7 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-weight: 10;
-  font-size: 50px;
+  font-size: 4vw;
   margin-left: 30px;
 }
 
@@ -95,7 +95,7 @@ form button {
   border: none;
 }
 .react-datetime-picker__inputGroup__leadingZero {
-  margin-top: 9.5px;
+  margin-top: 0.5vh;
   margin-right: 0;
 }
 .react-datetime-picker__wrapper > button {
@@ -107,7 +107,7 @@ form button {
   flex-direction: row;
 }
 .react-datetime-picker__inputGroup__divider {
-  margin-top: 2px;
+  margin-top: 0.3vh;
 }
 
 .react-calendar {

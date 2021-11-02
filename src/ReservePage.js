@@ -17,7 +17,6 @@ function Reserve() {
       ></div>
       <div className="rightSide">
         <h1>Book a Table</h1>
-
         <form id="reserve-form">
           <label htmlFor="name">Full Name</label>
           <input name="name" placeholder="Enter full name..." type="text" />
