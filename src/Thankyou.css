@@ -1,0 +1,27 @@
+.Thankyou {
+  background: url(https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(40%);
+  padding: none;
+  justify-items: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.Thankyou > h1 {
+  margin-top: 20vh;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 10;
+  font-size: 50px;
+  color: white;
+}
+.Thankyou > h2 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 10;
+  font-size: 30px;
+  color: white;
+}
