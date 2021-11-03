@@ -1,20 +1,37 @@
-import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Hero from "./Hero";
+import Login from "./login";
+import Signup from "./signup";
+import Reserve from "./ReservePage";
+import Thankyou from "./Thankyou";
 import Home from "./Home";
-import 'react-bootstrap';
-import './App.css';
-
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
-const App = () => {
+function App() {
   return (
     <Router>
-      <div>
-        <Route path='/'>
-          <Home />
-        </Route>
+      <div className="app">
+        <Switch>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/homepage">
+            <Home />
+          </Route>
+          <Route path="/reservepage">
+            <Reserve />
+          </Route>
+          <Route path="/thankyou">
+            <Thankyou />
+          </Route>
+          <Route path="/">
+            <Hero />
+          </Route>
+        </Switch>
       </div>
     </Router>
-
   );
 }
 
