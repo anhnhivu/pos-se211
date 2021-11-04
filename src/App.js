@@ -6,28 +6,35 @@ import Signup from "./signup";
 import Reserve from "./ReservePage";
 import Thankyou from "./Thankyou";
 import Home from "./Home";
+import FormCheckout from "./FormCheckout"
 function App() {
   return (
     <Router>
       <div className="app">
         <Switch>
-          <Route path="/signup">
+          <Route exact path="/signup">
             <Signup />
           </Route>
-          <Route path="/login">
+          <Route exact path="/login">
             <Login />
           </Route>
-          <Route path="/homepage">
+          <Route exact path="/homepage">
             <Home />
           </Route>
-          <Route path="/reservepage">
+          <Route exact path="/reservepage">
             <Reserve />
           </Route>
-          <Route path="/thankyou">
+          <Route exact path="/thankyou">
             <Thankyou />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Hero />
+          </Route>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route exact path='/checkout'>
+            <FormCheckout />
           </Route>
         </Switch>
       </div>

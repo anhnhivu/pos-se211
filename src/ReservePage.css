@@ -13,6 +13,7 @@
 }
 
 .reserve .rightSide {
+  background-color: white;
   height: 100%;
   flex: 50%;
   display: flex;
