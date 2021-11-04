@@ -8,18 +8,26 @@ This repo can be cloned and run directly from user's machine by some command in 
 
 ```
 App
-  |___ Home
-  |       |___ Categories     
-  |       |          |___ ItemPage 
-  |       |                      |___ Item
-  |       |                              |____ PopUp (Modal)
-  |       |___ Cart
-  |                |____ ItemCart
-  |                             |___ Confirmation (Modal)  
+  |___ Homepage
+  |           |___ Categories     
+  |           |          |___ ItemPage 
+  |           |                      |___ Item
+  |           |                              |____ PopUp (Modal)
+  |           |___ Cart
+  |                   |____ ItemCart
+  |                                 |___ Confirmation (Modal)  
+  |
+  |___ Reservepage
+  |___ Signup
+  |___ Login
+  |
+  |
   |___ Checkout
-             |___ VisaCheckOut
-             |___ MasterCardCheckOut
-             |___ MomoCheckout
+  |          |___ VisaCheckOut
+  |          |               
+  |          |___ MomoCheckout
+  |
+  |___ Thankyou
 ```
 
 ### State
