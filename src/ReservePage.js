@@ -1,10 +1,32 @@
 import React, { useState } from "react";
 import PizzaLeft from "./Images/pizzaLeft.jpg";
 import DateTimePicker from "react-datetime-picker";
+import { collection, addDoc, getFirestore } from "firebase/firestore";
+
 import "./ReservePage.css";
+import { useHistory } from "react-router";
 
 function Reserve() {
+  const history = useHistory();
+  const db = getFirestore();
   const [value, onChange] = useState(new Date());
+  const sendData = async (e) => {
+    e.preventDefault();
+    try {
+      const docRef = await addDoc(collection(db, "reservation"), {
+        Fullname: document.getElementById("Fullname").value,
+        Email: document.getElementById("Email").value,
+        DateofReservation: value,
+        numberPeople: document.getElementById("numpeople").value,
+        Notes: document.getElementById("customernotes").value,
+      });
+
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+    history.push("/thankyou");
+  };
   return (
     <div className="reserve">
       <div
@@ -17,9 +39,19 @@ function Reserve() {
         <h1>Book a Table</h1>
         <form id="reserve-form" action="/thankyou">
           <label htmlFor="name">Full Name</label>
-          <input name="name" placeholder="Enter full name..." type="text" />
+          <input
+            name="name"
+            placeholder="Enter full name..."
+            type="text"
+            id="Fullname"
+          />
           <label htmlFor="email">Email</label>
-          <input name="email" placeholder="Enter email..." type="email" />
+          <input
+            name="email"
+            placeholder="Enter email..."
+            type="email"
+            id="Email"
+          />
           <div className="datetimebox">
             <DateTimePicker
               onChange={onChange}
@@ -33,14 +65,19 @@ function Reserve() {
             name="number"
             required
             placeholder="How many people"
+            id="numpeople"
           ></input>
           <label htmlFor="message">Note</label>
           <textarea
             rows="4"
             placeholder="Your notes..."
             name="message"
+            id="customernotes"
           ></textarea>
-          <button> Send Message</button>
+          <button onClick={sendData} type="submit">
+            {" "}
+            Send Message
+          </button>
         </form>
       </div>
     </div>
