@@ -3,10 +3,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap';
 import './App.css';
 import { Button, Row, Col } from "react-bootstrap";
+import { useState } from "react";
+import { Modal } from 'react-bootstrap';
+import PurchasePopup from "./PurchasePopup";
+import { Link } from "react-router-dom";
+
 
 const ItemCart = (props) => {
     const indexInArray = props.cart.map(function(item) 
                         {return item.id}).indexOf(props.id);
+    
     return (
         <div>
             <li className="mb-3">
@@ -17,14 +23,14 @@ const ItemCart = (props) => {
                 </Col>
                 <Col sm={4} className="">
                     <Row className="fw-bold text-danger">
-                    <Col sm={12} className="d-flex justify-content-start align-items-center">
-                        {props.name}
-                    </Col>
+                        <Col sm={12} className="d-flex justify-content-start align-items-center">
+                            {props.name}
+                        </Col>
                     </Row>
                     <Row className="fw-bold">
-                    <Col sm={12} className="d-flex justify-content-start align-items-center">
-                        {(props.price * props.quantity).toFixed(2)}
-                    </Col>
+                        <Col sm={12} className="d-flex justify-content-start align-items-center">
+                            {(props.price * props.quantity).toFixed(2)}
+                        </Col>
                     </Row>
                     
                 </Col>
@@ -55,6 +61,13 @@ const Cart = (props) => {
                 : props.cart.reduce((total, obj) => {
                     return total + obj["price"] * obj["quantity"];
                  }, 0).toFixed(2);
+    const[modalIsOpen, setModalOpenState] = useState(false);
+    const closeModal = () => {
+        setModalOpenState(false);
+      }
+    const openModal = () => {
+        setModalOpenState(true);
+      }
 
     return (
         <div className="card h-100">
@@ -68,7 +81,7 @@ const Cart = (props) => {
             <hr/>
             
             <ul id="orderlist" className="list-unstyled d-flex flex-column align-items-stretch">
-                {props.cart.map(itemInCart => {
+                {props.cart.map((itemInCart) => {
                     return <ItemCart
                     key= {itemInCart.id}
                     id= {itemInCart.id}
@@ -95,7 +108,40 @@ const Cart = (props) => {
                 </li>
                 <li><p></p></li>
                 <li>
-                    <button className="btn btn-danger fw-bold w-100 rounded-pill">CHECK OUT</button>
+                <button type ="submit" className="btn btn-danger fw-bold w-100 rounded-pill" 
+                        onClick={()=>{
+                            if(props.cart.length !== 0) openModal();
+                            else alert("Empty cart!! Please choose a product")
+                        }}   
+                    >CHECK OUT</button>
+                    <Modal show={modalIsOpen} onHide={() => closeModal()}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Order Confirmation</Modal.Title>
+                        </Modal.Header>
+                        <PurchasePopup cart={props.cart}  />
+                        <Modal.Footer>
+                        <div>
+                            <li className="fw-bold d-flex justify-content-between align-items-center">
+                                <big> <span style={{marginRight:'20px'}}> Total </span> 
+                                $ <span className="card-text">
+                                    {totalPrice}
+                                </span>
+                                </big>
+                            </li>
+                        </div>        
+                        <div>
+                            <button className="btn btn-sm btn-danger rounded-pill" type="button" >
+                                 <Link to={{
+                                    pathname:'/checkout/',
+                                    state: {
+                                        price:{totalPrice}
+                                    },
+                                 }} style={{color: 'inherit', textDecoration: 'none'}}> PURCHASE</Link>
+                            </button>
+
+                        </div>
+                        </Modal.Footer>
+                    </Modal>
                 </li>
                 </ul>
             </div>

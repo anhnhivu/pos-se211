@@ -1,16 +1,33 @@
 # POS-System
 
-## Structure
+## Introduction
+This is a proposed idea of a POS System that is used to deliver a **non-direct contact** between customer and staff within the restaurant. <br/>
+This repo can be cloned and run directly from user's machine by some command in the below section **( _Please refer to the User Manual Section_)**
+
+## Component Structure
 
 ```
 App
-  |___ Home
-          |___ Categories     
-          |          |___ ItemPage 
-          |                      |___ Item
-          |                              |____ PopUp (Modal)
-          |___ Cart
-                  |____ ItemCart
+  |___ Homepage
+  |           |___ Categories     
+  |           |          |___ ItemPage 
+  |           |                      |___ Item
+  |           |                              |____ PopUp (Modal)
+  |           |___ Cart
+  |                   |____ ItemCart
+  |                                 |___ Confirmation (Modal)  
+  |
+  |___ Reservepage
+  |___ Signup
+  |___ Login
+  |
+  |
+  |___ Checkout
+  |          |___ VisaCheckOut
+  |          |               
+  |          |___ MomoCheckout
+  |
+  |___ Thankyou
 ```
 
 ### State
@@ -49,7 +66,7 @@ Data is read from file `db.json`. To make sure that the data is fetched properly
 ```
 
 
-# POS-System
+## POS-System User Manual
 
 To run this repo, you may need to run these commands.
 

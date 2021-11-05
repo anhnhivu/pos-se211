@@ -4,10 +4,10 @@ import {Tabs, Tab} from 'react-bootstrap';
 import ItemPage from "./ItemPage";
 import 'jquery';
 
+
 const Categories = (props) => {
     return (
         <div className="card rounded-3 mb-3">
-          
            <Tabs variant="pills" id="Tab" defaultActiveKey="Combo" 
                 className="my-3 mx-4 flex nav-fill">
 
