@@ -1,4 +1,4 @@
-import "./App.css";
+//import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Hero from "./Hero";
 import Login from "./login";
@@ -6,7 +6,7 @@ import Signup from "./signup";
 import Reserve from "./ReservePage";
 import Thankyou from "./Thankyou";
 import Home from "./Home";
-import FormCheckout from "./FormCheckout"
+import FormCheckout from "./FormCheckout";
 function App() {
   return (
     <Router>
@@ -30,10 +30,10 @@ function App() {
           <Route exact path="/">
             <Hero />
           </Route>
-          <Route exact path='/'>
+          <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path='/checkout'>
+          <Route exact path="/checkout">
             <FormCheckout />
           </Route>
         </Switch>

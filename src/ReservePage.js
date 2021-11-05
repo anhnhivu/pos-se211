@@ -74,7 +74,7 @@ function Reserve() {
             name="message"
             id="customernotes"
           ></textarea>
-          <button onClick={sendData} type="submit">
+          <button type="submit" onClick={sendData}>
             {" "}
             Send Message
           </button>
