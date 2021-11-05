@@ -1,8 +1,8 @@
 .Thankyou {
-  background: url("./Images/thankyou.jpg");
+  /* background: url("./Images/thankyou.jpg");
   height: 100vh;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
   filter: grayscale(40%);
   padding: none;
   justify-items: center;

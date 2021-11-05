@@ -13,11 +13,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  /* background: url(https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); */
   height: 100vh;
-  background-position: center;
+  /* background-position: center;
   background-size: cover;
-  filter: grayscale(30%);
+  filter: grayscale(30%); */
   top: 0;
 }
 .FormContainer {
