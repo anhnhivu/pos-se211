@@ -214,3 +214,8 @@ div.center-cropped img{
   margin-right: -50%;
   transform: translate(-50%, -50%)
 }
+
+#note::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: normal;
+}

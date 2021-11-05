@@ -21,13 +21,14 @@ const Item = (props) => {
       setModalQtt(1);
     }
     const saveNote = () => {
-        if ($('#note').val() === "") {
-            alert("Nothing is entered!");
-        }
-        else {
-            var note = $('#note').val();
-            alert("Your note is well received: " + note);
-        }
+        // has potential use in the future, keeping the code for now
+        // if ($('#note').val() === "") {
+        //     alert("Nothing is entered!");
+        // }
+        // else {
+        //     var note = $('#note').val();
+        //     alert("Your note is well received: " + note);
+        // }
         addItem(props, currentModalQtt);
         closeModal();
     }
