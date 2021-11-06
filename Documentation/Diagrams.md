@@ -1,17 +1,21 @@
+# UML Diagrams
+
 ## Context Model
 
-![ContextModel2](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/ContextModel2.png)
+![ContextModel2](./Diagrams/ContextModel2.png)
 
 ## Use Case Diagram
 
-![Overall-UseCase](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/Overall-UseCase.png)
+![Overall-UseCase](./Diagrams/Overall-UseCase.png)
 
 ## Activity Diagram
 
-![activity](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/activity.png)
+![activity](./Diagrams/activity.png)
 
-![activity_staff](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/activity_reserve.png)
+![activity_staff](./Diagrams/activity_reserve.png)
+
+![activity_staff](./Diagrams/activity_staff.png)
 
 ## Class Diagram
 
-![class_diagram](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/class_diagram.png)
+![class_diagram](./Diagrams/class_diagram.png)
