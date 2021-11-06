@@ -1,16 +1,17 @@
-# Architecture Approach
+# Architectural Approach
 
 
+We are choosing the Three-Layer Architecture:
 
-Three-layer pattern with MVC at Presentation Layer.
+- The `presentation layer`, which contains `View, Controller, Model` in the `MVC` pattern, interacts with the users.
+- The `business logic layer` contains the entire logic of the program, most of the code stays here.
+- The `data access layer` composes of persistent storage mechanism and the data access layer. It supports connection to the database and to perform insert, update, delete, get data from the database.
 
-
-
-![OverallThreeTier](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/OverallThreeTier.png)
+![OverallThreeTier](./Diagrams/OverallThreeTier.png)
 
 ## Deployment Diagram
 
-![UML-Deployment.drawio (2)](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/UML-Deployment.drawio (2).png)
+![UML-Deployment.drawio (2)](https://github.com/anhnhivu/Restaurant-Application-Semester-211/blob/master/Documentation/Diagrams/UML-Deployment.drawio%20(2).png)
 
 
 
@@ -20,10 +21,10 @@ Three-layer pattern with MVC at Presentation Layer.
 
 
 
-![component_diagram](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/component_diagram.png)
+![component_diagram](./Diagrams/component_diagram.png)
 
 
 
 ## Package Diagram
 
-![package_diagram](/Users/vuanhnhi/Desktop/projectse/github/Documentation/Diagrams/package_diagram.png)
+![package_diagram](./Diagrams/package_diagram.png)
