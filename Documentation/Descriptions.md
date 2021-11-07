@@ -1,4 +1,6 @@
-# Project Scope
+# Project Overview
+
+## Project Scope
 
 **Project scope description:**
 This project is dedicated to developing a web-based point of sales system to match the restaurant owner's needs in these trying times, namely to allow sales of food items and meals to happen without direct contact between customers and clerks. This system may later be expanded into something commonly used by any restaurant.
@@ -17,3 +19,10 @@ This project shall not include the tools, platform or domain needed to host, mai
 
  **Project assumptions:**
 Employees will have been trained for their respective position within the system and will follow the standard documented procedures when working with the system. All equipment/tools involved are expected not to malfunction mid-operation under any circumstances. Routine checkups and maintenance of the system should be performed regularly to detect any abnormalities. It is assumed that only online payment is allowed when using this system to ensure non-direct contact between customers and staffs.
+
+## Context
+A customer arriving at a restaurant using this POS System can scan the QR code or type in the website name to access the system. He/she then places an order through this system and pays for the meal. A clerk can checks the order and the kitchen staff receives the order via the system. The system also records all the orders and transactions for the manager to review.
+
+## Context Model
+
+![ContextModel2](./Diagrams/ContextModel2.png)
