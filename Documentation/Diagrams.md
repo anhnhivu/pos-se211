@@ -1,9 +1,5 @@
 # UML Diagrams
 
-## Context Model
-
-![ContextModel2](./Diagrams/ContextModel2.png)
-
 ## Use Case Diagram
 
 ![Overall-UseCase](./Diagrams/Overall-UseCase.png)
