@@ -25,4 +25,4 @@ A customer arriving at a restaurant using this POS System can scan the QR code o
 
 ## Context Model
 
-![ContextModel2](./Diagrams/ContextModel2.png)
+![ContextModel2](../Diagrams/ContextModel2.png)
