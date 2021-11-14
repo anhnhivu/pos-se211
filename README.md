@@ -2,8 +2,15 @@
 
 ## Introduction
 This is a proposed idea of a POS System that is used to deliver a **non-direct contact** between customers and staffs within a restaurant. 
-This repo can be cloned and run directly from your machine **(_Please refer to the User Manual Section_)**.
+This repo can be cloned and run directly from your machine (_Please refer to the User Manual Section_).
 
+## Website
+The website is deployed using Firebase at 
+https://pos-restaurant-1d5c6.web.app/
+
+## Technologies
+- ReactJS
+- Firebase: Authentication, Cloud Firestore, Hosting
 
 ## User Manual
 
